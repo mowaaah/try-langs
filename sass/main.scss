@@ -1,0 +1,14 @@
+$secondary : #C5B8AB;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$trigoware-theme-colors: (
+    "neutral" : #B2A596,
+    "calc" : #ddcfca,
+    "darkneutral" : #90806d
+);
+
+$theme-colors : map-merge($trigoware-theme-colors , $theme-colors);
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+

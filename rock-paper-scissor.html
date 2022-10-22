@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock,Paper,Scissor: Game</title>
+    <!--ONLINE BOOTSTRAP-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+		  rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+		  crossorigin="anonymous"/>
+    
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="rock-paper-scissor.css">
+    <link rel="stylesheet" href="calcu-extrastylesheet.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+		    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+		    crossorigin="anonymous">
+    </script>
+    <!--ICO-->
+    <link rel="shortcut icon" href="titlelogo.png" type="image/x-icon" />
+    <!--ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body style="background-color: #D1C3BE;">
+    <!--start of navbar-->
+        <div class="container-fluid bg-secondary text-primary">
+            <div class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="calculator_page.html">
+                    <img src="calcu-logo.png" style="width: 100px;">
+                </a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#NavBarMenu">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="NavBarMenu">
+                    <ul class="navbar-nav text-center my-1">
+                        <li class="nav-item">
+                            <a class="nav-link nabvrButton" href="calculator_page.html">Calculator</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle nabvrButton" href="#" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">Others</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item nabvrDrpdwn" href="tempconverter_page.html">Temperature Converter</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item nabvrDrpdwn" href="rock-paper-scissor.html">Rock, Paper, Scissor: Game</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item nabvrDrpdwn" href="#">Coming soon..</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nabvrButton" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button type="button" onclick="resetGame();" class="btn mx-4 btn-calc">Restart Game</button>
+        <div class="title_header">
+            <div class="score_Board"> 
+                <div class="title">
+                    <img src='/assets/title_header.png'  style="width: 300px; align-items: center;">
+                </div>
+                <div class="person_Score">
+                    <p>SCORE</p>
+                    <h1>0</h1>
+                </div>
+            </div>
+            <div class="hands_btn">
+                <div class="hand paper">
+                    <img src='/assets/paper-pic.png' onclick="pickPersonHand('paper')"/>
+                </div>
+                <div class="hand scissors">
+                    <img src='/assets/scissor-pic.png' onclick="pickPersonHand('scissors')"/>
+                </div>
+                <div class="hand rock">
+                    <img src='/assets/rock-pic.png' onclick="pickPersonHand('rock')"/>                        
+                </div>
+            </div>
+            <div class="game">       
+                <div class="personhand">
+                    <h1>YOU PICKED</h1>
+                    <div class="handImageContainer">
+                        <img id="personPickImage" src='/assets/paper-pic.png'>
+                    </div>
+                </div>
+                <div class="neuter"> 
+                    <div class="decision"><h1> YOU WIN! </h1></div>
+                    <div class="new_Game" onclick="restartbtn_Game()">PLAY AGAIN</div>
+                </div>
+                <div class="comphand">
+                    <h1>COMPUTER PICKED</h1>
+                    <div class="handImageContainer">
+                        <img id="computerPickImage" src='/assets/paper-pic.png'> 
+                    </div>   
+                </div>       
+            </div>        
+        </div>
+        <br><br><br><br><br><br><!--SPACE-->
+
+        <!--start of footer-->
+        <footer class="bg-secondary">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-3">
+                        <img src="calcu-logo.png" class="my-3 mx-2" style="width: 170px;">
+                    
+                    </div>
+                    <div class="col-lg-3 col-md mt-3">
+                        <h5 class="mx-4 text-white">Useful Links</h5>
+                        <ul style="list-style-type: none;">
+                            <li> <a href="#" class="ftrlinks">About Us</a></li>
+                            <li> <a href="calculator_page.html" class="ftrlinks">Calculator</a></li>
+                            <li> <a href="#" class="ftrlinks">Others</a></li>
+                            <li> <a href="#" class="ftrlinks">Privacy Policy</a></li>
+                            <li> <a href="#" class="ftrlinks">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md mt-3">
+                        <h5 class="mx-4 text-white">Others</h5>
+                        <ul style="list-style-type: none;">
+                            <li> <a href="tempconverter_page.html" class="ftrlinks">Temperature Converter</a></li>
+                            <li> <a href="rock-paper-scissor.html" class="ftrlinks">Rock, Paper, Scissor: Game</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-3">
+                        <h5 class="mx-2 opacity-75 text-center text-white">Connect with us</h5>
+                        <section class="text-center">
+                            <a href="https://www.facebook.com/" role="button" class="btn m-1" style="background-color: #3b5998; border-radius: 50%;">
+                                <i class="bi bi-facebook" style="font-size: 20pt; color: white;"></i></a>
+                            <a href="https://twitter.com/" role="button" class="btn m-1" style="background-color: #55acee; border-radius: 50%;">
+                                <i class="bi bi-twitter" style="font-size: 20pt; color: white;"></i></a>
+                            <a href="https://www.instagram.com/" role="button" class="btn m-1" style="background-color: #ac2bac; border-radius: 50%;">
+                                <i class="bi bi-instagram" style="font-size: 20pt; color: white;"></i></a>
+                            <a href="https://www.google.com/intl/fil/gmail/about/" role="button" class="btn m-1" style="background-color: #dd4b39; border-radius: 50%;">
+                                <i class="bi bi-google" style="font-size: 20pt; color: white;"></i></a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-3">
+                <i class="bi bi-c-circle" style="color:#3b3531;"> 2022 All Rights Reserved</i><br><br>
+                <i class="fw-light" style="color:#3b3531;">Created by: Margus Odette H. Alovera</i>
+            </div>
+        </footer>
+    <!--end of footer-->
+</body>
+<!--External JS-->
+    <script src="main2.js"></script>
+</html>
+<!--
+    REFERENCES:
+    https://github.com/CleverProgrammers/challenge-sunnyside-landing-page
+-->

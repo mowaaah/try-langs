@@ -1,0 +1,38 @@
+#form1{
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 9%;
+    border: 3px solid #B2A596;
+    padding: 10px;
+    border-radius: 25px;
+}
+.backgroundConvert{
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 9%;
+    border: 3px solid #B2A596;
+    padding: 10px;
+    border-radius: 25px;
+}
+.nabvrButton{
+    color:white
+}
+.nabvrButton:hover{
+    background-color: white;
+    color: #60574f;
+}
+.nabvrDrpdwn:hover{
+    color: white;
+    background-color: #C5B8AB;
+}
+.ftrlinks{
+    color: #60574f;
+}
+.ftrlinks:hover{
+    color: black;
+}
+.calcuBtn{
+    border-color: black; background-color: white; color: black; padding: 3%; width: 20%; border-width: 2px; cursor: pointer; 
+}
